@@ -1,0 +1,30 @@
+{
+  "name": "My-NLW5",
+  "version": "1.0.0",
+  "description": "Backend project using Node.js developed along the NLW5 from Rocketseat.",
+  "main": "index.js",
+  "scripts": {
+	"dev": "ts-node-dev src/server.ts",
+	"start": "ts-node-dev src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NanderSantos/My-NLW5.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NanderSantos/My-NLW5/issues"
+  },
+  "homepage": "https://github.com/NanderSantos/My-NLW5#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.4"
+  }
+}
