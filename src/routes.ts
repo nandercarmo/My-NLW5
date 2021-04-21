@@ -1,10 +1,20 @@
 import { Router } from "express";
+
+import { MessagesController } from "./controllers/MessagesController";
 import { SettingsController } from "./controllers/SettingsController";
+import { UsersController } from "./controllers/UsersController";
 
 const routes =  Router();
 
-const settingsControler = new SettingsController();
+const settingsController = new SettingsController();
+const usersController = new UsersController();
+const messagesController = new MessagesController();
 
-routes.post("/settings", (req, res) => settingsControler.create(req, res));
+routes.post("/settings", (request, response) => settingsController.create(request, response));
+
+routes.post("/users", usersController.create);
+
+routes.post("/messages", messagesController.create);
+routes.post("/messages/:id", messagesController.showByUser);
 
 export { routes };
