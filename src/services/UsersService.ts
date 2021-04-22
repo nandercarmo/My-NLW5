@@ -45,9 +45,7 @@ class UsersService {
 
 	async findByEmail({ email }: IUserFind) {
 
-		const user = await this.usersRepository.findOne({
-			email
-		});
+		const user = await this.usersRepository.findOne({ email });
 
 		return user;
 	}
