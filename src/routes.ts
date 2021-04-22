@@ -11,6 +11,8 @@ const usersController = new UsersController();
 const messagesController = new MessagesController();
 
 routes.post("/settings", (request, response) => settingsController.create(request, response));
+routes.get("/settings/:username", settingsController.findByUsername);
+routes.put("/settings/:username", settingsController.update);
 
 routes.post("/users", usersController.create);
 

@@ -10,6 +10,17 @@ interface ISettingsCreate {
 	username: string;
 }
 
+interface ISettingsFind {
+
+	username: string;
+}
+
+interface ISettingsUpdate {
+
+	username: string;
+	chat: boolean;
+}
+
 class SettingsService {
 
 	private settingsRepository: Repository<Setting>;
@@ -37,6 +48,24 @@ class SettingsService {
 		await this.settingsRepository.save(settings);
 
 		return settings;
+	}
+
+	async findByUsername({ username }: ISettingsFind) {
+
+		const settings = await this.settingsRepository.findOne({
+			username
+		});
+
+		return settings;
+	}
+
+	async update({ username, chat }: ISettingsUpdate) {
+
+		await this.settingsRepository.createQueryBuilder()
+			.update(Setting)
+			.set({ chat })
+			.where("username = :username", { username })
+			.execute();
 	}
 }
 
