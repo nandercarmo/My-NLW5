@@ -10,6 +10,11 @@ interface IMessageCreate {
 	user_id: string;
 }
 
+interface IMessageFind {
+
+	user_id: string;
+}
+
 class MessagesService {
 
 	private messageRepository: Repository<Message>;
@@ -32,7 +37,7 @@ class MessagesService {
 		return message;
 	};
 
-	async listenByUser(user_id: string) {
+	async listByUser({ user_id }: IMessageFind) {
 
 		const list = await this.messageRepository.find({
 			where: { user_id },
