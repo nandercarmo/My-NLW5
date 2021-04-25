@@ -36,12 +36,14 @@ $ git clone https://github.com/NanderSantos/My-NLW5.git
 $ cd My-NLW5
 
 $ yarn install
+
+$ yarn init-db
 ```
 
 Or just run this one-liner command and everything will be done:
 
 ```bash
-$ git clone https://github.com/NanderSantos/My-NLW5.git && cd My-NLW5 && yarn install
+$ git clone https://github.com/NanderSantos/My-NLW5.git && cd My-NLW5 && yarn install && yarn init-db
 ```
 
 ---
