@@ -7,7 +7,8 @@
     "dev": "ts-node-dev src/server.ts",
     "start": "ts-node-dev src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "typeorm": "ts-node-dev node_modules/typeorm/cli.js"
+    "typeorm": "ts-node-dev node_modules/typeorm/cli.js",
+    "init-db": "ts-node-dev node_modules/typeorm/cli.js migration:run"
   },
   "repository": {
     "type": "git",
