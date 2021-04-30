@@ -8,6 +8,8 @@
     <img src="https://img.shields.io/badge/license-MIT-blueviolet">
 </div>
 
+---
+
 Project using Node.js developed along the **Next Level Week 05** from **[Rocketseat](https://rocketseat.com.br/)**. This project implements a live chat using NodeJS to build the backend of this service. 
 
 <p align="center">
